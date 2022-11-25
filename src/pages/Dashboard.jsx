@@ -2,10 +2,10 @@ import "./dashboard.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Chat from "../components/chat/Chat";
-import axios from "axios";
 import { io } from "socket.io-client";
 import React, { useState, useEffect, useRef } from "react";
 import LoadingPage from "../components/LoadingPage"
+import { axiosInstance } from "../app/config";
 const Dashboard = (props) => {
 
   const navigate = useNavigate();
@@ -14,10 +14,9 @@ const Dashboard = (props) => {
   const [message, setMessage] = useState("");
   const [chatrooms, setChatrooms] = useState([]);
   const [chat, setChat] = useState([]);
-  const [test, setTest] = useState(0);
 
   const getChatRooms = () => {
-    axios
+    axiosInstance
       .get("/api/room/", {
         headers: {
           Authorization: "Bearer" + user,
@@ -31,7 +30,7 @@ const Dashboard = (props) => {
       });
   };
   const socketRef = useRef();
-  const socketUrl = "https://spider-chat-tomer.netlify.app/";
+  const socketUrl = "https://spider-chat-app.herokuapp.com/";
   useEffect(() => {
     fetchMessages(roomParam).then((messages) => {
       setChat(messages);
@@ -46,7 +45,7 @@ const Dashboard = (props) => {
   }, []);
 
   const fetchMessages = async (room) => {
-      const response = await axios.get(`/api/message/${room}`);
+      const response = await axiosInstance.get(`/api/message/${room}`);
       return response.data;
     
   };
