@@ -16,7 +16,7 @@ import React, {
     
     const [isConnected, setConnected] = useState(false)
   
-    const socketUrl = "http://localhost:3001/"
+    const socketUrl = "https://spider-chat-tomer.netlify.app/"
   
     const socket = useRef(Socket)
   

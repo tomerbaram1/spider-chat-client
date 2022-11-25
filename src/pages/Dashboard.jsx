@@ -31,7 +31,7 @@ const Dashboard = (props) => {
       });
   };
   const socketRef = useRef();
-  const socketUrl = "http://localhost:3001/";
+  const socketUrl = "https://spider-chat-tomer.netlify.app/";
   useEffect(() => {
     fetchMessages(roomParam).then((messages) => {
       setChat(messages);

@@ -3,22 +3,21 @@ import { useEffect } from "react";
 import "./chat.css";
 import { useSelector } from "react-redux";
 import moment from "moment";
-import { useState } from "react";
 
 export default function Messages({ chat }) {
   const { user } = useSelector((state) => state.auth);
   const messageEl = useRef(null);
 
-  // useEffect(() => {
-  //   if (messageEl.current !== null) {
-  //     messageEl.current.addEventListener("DOMNodeInserted", (event) => {
-  //       messageEl.current?.scrollIntoView({
-  //         bottom: messageEl.current.scrollHeight,
-  //         behavior: "smooth",
-  //       });
-  //     });
-  //   }
-  // }, [chat]);
+  useEffect(() => {
+    if (messageEl.current == null) {
+      messageEl.current.addEventListener("DOMNodeInserted", (event) => {
+        messageEl.current?.scrollIntoView({
+          bottom: messageEl.current.scrollHeight,
+          behavior: "smooth",
+        });
+      });
+    }
+  }, [chat]);
   useEffect(() => {
     if(chat && messageEl ){
       messageEl.current?.scrollIntoView({
