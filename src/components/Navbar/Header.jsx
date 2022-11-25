@@ -40,7 +40,7 @@ setMenuClicked(!menuClicked)
         </div>
       ) : (
         <><Link className="text-link" to="/login">
-        <FaUser /> login to continue
+        <FaUser /> Login to continue
       </Link></>)}
 
       <div>

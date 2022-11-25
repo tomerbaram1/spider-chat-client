@@ -1,15 +1,21 @@
 .form{
-    height: 50%;
-    width: 70%;
-    color: black;
-    margin-bottom: 150px;
-    padding: 2rem;
-    background-color: ghostwhite;
-    border-radius: 3%;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px !important;
+  height: 64%;
+  width: 70% ;
+  padding: 2rem;
+  margin-top: 15vh;
+  right: 35%;
+  bottom: 10%;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px !important;
+  border-radius: 3%;
+  color: black;
+  background-color: #fff;
   }
   .register-form{
     height: 78%;
+    right: 35%;
+    bottom: 10%;
+    position: absolute;
     width: 70%;
     padding: 2rem;
     margin-top: 15vh;
@@ -120,20 +126,24 @@
   }
   @media only screen and (min-width: 340px) and (max-width: 990px) {
     .form{
-      position: absolute;
-      height: 70%;
-      background: transparent;
-      color: white;
-      box-shadow: none;
+        height: 35% !important;
+        position: absolute;
+
+        left: 25%;
+        bottom: 50% ;
+            
       
 
     }
     .register-form{
-      position: absolute;
       margin-top: 170%;
+      height: 35% !important;
+      position: absolute;
+
+      left: 25%;
+      bottom: 50% ;
+
 
     }
-    .signup__bg{
-      height: 1000px;
-    }
+
   }

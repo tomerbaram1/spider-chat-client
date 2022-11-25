@@ -88,6 +88,14 @@
 }
 @media only screen and (min-width: 340px) and (max-width: 990px) {
   .text-link{
-    font-size: 2vh;
+    font-size: 1.4vh;
+    
+  }
+  .header{
+    height: 15%;
+  }
+  .logo{
+    width: 70vw;
+    height: 40vh;
   }
 }

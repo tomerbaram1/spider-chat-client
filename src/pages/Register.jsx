@@ -100,7 +100,7 @@ function Signup() {
                             <Form.Control type="password" placeholder="Confirm password" onChange={onChange} name="password2" id="password2" value={password2} />
                         </Form.Group>
                         <Button variant="primary" type="submit">
-                             Signup
+                             Sign up
                         </Button>
                         <div className="py-2">
                             <p className="text-center text-secondery">

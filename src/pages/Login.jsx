@@ -58,12 +58,13 @@ function Login() {
     return (
         <Container>
             <Row>
-                <Col md={7} className="d-flex align-items-center justify-content-center flex-direction-column text-white">
+                <Col md={7} className="d-flex align-items-center justify-content-center flex-direction-column ">
                     <Form className="form" style={{ width: "80%", maxWidth: 500 }} onSubmit={onSubmit}>
+                    <h1 className="text-center">Log In</h1>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control type="email" placeholder="Enter email" onChange={onChange} id="email" name="email" value={email} required />
-                            <Form.Text className="text-secondery"> We'll never share your email with anyone else.</Form.Text>
+                            <Form.Text className="text-secondery">We'll never share your email with anyone else.</Form.Text>
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -79,7 +80,7 @@ function Login() {
                             </p>
                         </div>
                     </Form>
-                    <Col md={3} className="stripe">
+                    <Col md={4} className="stripe">
                 <div class="bg"></div>
                   <div class="bg bg2"></div>
                   <div class="bg bg3"></div>
