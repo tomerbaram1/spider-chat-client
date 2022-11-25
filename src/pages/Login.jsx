@@ -64,7 +64,7 @@ function Login() {
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control type="email" placeholder="Enter email" onChange={onChange} id="email" name="email" value={email} required />
-                            <Form.Text className="text-secondery">We'll never share your email with anyone else.</Form.Text>
+                            <Form.Text className="text-secondery">Don't Worry, We'll never share your email with anyone else.</Form.Text>
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
