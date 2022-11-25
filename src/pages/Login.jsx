@@ -58,7 +58,6 @@ function Login() {
     return (
         <Container>
             <Row>
-                <Col md={4} className="login__bg"></Col>
                 <Col md={7} className="d-flex align-items-center justify-content-center flex-direction-column text-white">
                     <Form className="form" style={{ width: "80%", maxWidth: 500 }} onSubmit={onSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -80,6 +79,12 @@ function Login() {
                             </p>
                         </div>
                     </Form>
+                    <Col md={3} className="stripe">
+                <div class="bg"></div>
+                  <div class="bg bg2"></div>
+                  <div class="bg bg3"></div>
+
+                </Col>
                 </Col>
             </Row>
         </Container>
