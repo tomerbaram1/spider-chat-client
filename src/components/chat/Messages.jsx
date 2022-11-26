@@ -39,7 +39,7 @@ export default function Messages({ chat,message }) {
                 <h2 className="text">{message.name}</h2>
                   <p className="timestamp">
                     {moment(message.createdAt).format(
-                      "hh/mm/ss, A"
+                      "hh:mm:ss, A"
                     )}
                   </p>
              

@@ -115,7 +115,7 @@
   
   @media only screen and (min-width: 240px) and (max-width: 999px) {
     .chat-container{
-      height: 100%;
+      height: 100vh;
     
     }
     .name{
