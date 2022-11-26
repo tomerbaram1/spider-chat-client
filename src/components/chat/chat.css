@@ -81,7 +81,9 @@
   text-transform: uppercase; 
   color: #999
 }
-
+.text{
+  font-size: 1rem;
+}
 
 
 
