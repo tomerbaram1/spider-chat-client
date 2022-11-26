@@ -111,4 +111,9 @@
       width: 99vw;
 
     }
+    .input{
+      height: 7vh;
+      border: 10px rgba(0, 0, 0, 0.397) solid;
+
+    }
   }

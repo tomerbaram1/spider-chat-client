@@ -4,34 +4,27 @@ import "./chat.css";
 import { useSelector } from "react-redux";
 import moment from "moment";
 
-export default function Messages({ chat }) {
+export default function Messages({ chat,message }) {
   const { user } = useSelector((state) => state.auth);
   const messageEl = useRef(null);
-
   useEffect(() => {
-    if (messageEl.current == null) {
-      messageEl.current.addEventListener("DOMNodeInserted", (event) => {
-        messageEl.current?.scrollIntoView({
-          bottom: messageEl.current.scrollHeight,
-          behavior: "smooth",
-        });
-      });
-    }
+    messageEl.current?.lastElementChild?.scrollIntoView({
+      behavior: "smooth"
+    });
   }, [chat]);
-  useEffect(() => {
-    if(chat && messageEl ){
-      messageEl.current?.scrollIntoView({
-        bottom: messageEl.current.scrollHeight,
-        behavior: "smooth",
-      });
-    }
+  // useEffect(() => {
+  //   if(chat && messageEl ){
+  //     messageEl.current?.scrollIntoView({
+  //       bottom: messageEl.current.scrollHeight,
+  //       behavior: "smooth",
+  //     });
+  //   }
 
-  }, [chat]);
+  // }, [chat]);
 
   return (
     <div>
-      <section>
-        <ul ref={messageEl} className="messages">
+        <div  className="messages" ref={messageEl}>
           {chat.map((message, index) => {
             return (
               
@@ -57,8 +50,7 @@ export default function Messages({ chat }) {
               
             );
           })}
-        </ul>
-      </section>
+        </div >
     </div>
   );
 }

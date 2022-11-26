@@ -14,6 +14,7 @@ const Dashboard = (props) => {
   const [message, setMessage] = useState("");
   const [chatrooms, setChatrooms] = useState([]);
   const [chat, setChat] = useState([]);
+  const messageEl = useRef(null);
 
   const getChatRooms = () => {
     axiosInstance
