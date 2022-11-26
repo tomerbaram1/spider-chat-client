@@ -24,33 +24,33 @@ export default function Messages({ chat,message }) {
 
   return (
     <div>
-        <div  className="messages" ref={messageEl}>
-          {chat.map((message, index) => {
-            return (
-              
-                <li
-                  key={index}
-                  className={`msg ${
-                    message.message === user.name ? "userMsg" : "diffMsg"
-                  }`}>
-                  <div className="message">
-                    <span className="name">{message.message}</span>
-    
-                    <h2 className="text">{message.name}</h2>
-                      <p className="timestamp">
-                        {moment(message.createdAt).format(
-                          "DD/MM/YY, A"
-                        )}
-                      </p>
-                 
-                   
-                    
-                  </div>
-                </li>
-              
-            );
-          })}
-        </div >
-    </div>
+    <div  className="messages" ref={messageEl}>
+      {chat.map((message, index) => {
+        return (
+          
+            <li
+              key={index}
+              className={`msg ${
+                message.message === user.name ? "userMsg" : "diffMsg"
+              }`}>
+              <div className="message">
+                <span className="name">{message.message}</span>
+
+                <h2 className="text">{message.name}</h2>
+                  <p className="timestamp">
+                    {moment(message.createdAt).format(
+                      "hh/mm/ss, A"
+                    )}
+                  </p>
+             
+               
+                
+              </div>
+            </li>
+          
+        );
+      })}
+    </div >
+</div>
   );
 }
