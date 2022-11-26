@@ -33,18 +33,18 @@ export default function Messages({ chat,message }) {
                   className={`msg ${
                     message.message === user.name ? "userMsg" : "diffMsg"
                   }`}>
-                  <div>
-                    <span>{message.message}</span>
-
-                    <h3>{message.name}</h3>
-                    <div></div>
-                    <div>
-                      <p>
+                  <div className="message">
+                    <span className="name">{message.message}</span>
+    
+                    <h2 className="text">{message.name}</h2>
+                      <p className="timestamp">
                         {moment(message.createdAt).format(
-                          "DD/MM/YY, hh:mm:ss A"
+                          "DD/MM/YY, A"
                         )}
                       </p>
-                    </div>
+                 
+                   
+                    
                   </div>
                 </li>
               
